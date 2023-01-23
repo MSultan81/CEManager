@@ -1,0 +1,136 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    height: 90px;
+    width: 100%;
+    background: rgb(37, 36, 36);
+}
+
+.logo {
+    font-size: 55px;
+    font-weight: bolder;
+    color: #5284ca;
+    font-style: italic;
+    padding: 0 50px;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+
+nav a {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+    nav a:active, nav a:hover {
+        border: 0;
+        color: #3498db;
+        transition: .5s;
+    }
+
+nav #icon {
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#Check {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    label.logo {
+        font-size: 55px;
+        padding-left: 50px;
+    }
+
+    nav ul {
+        margin-right: 20px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width : 950px) {
+    nav #icon {
+        display: block;
+    }
+
+    label.logo {
+        font-size: 45px;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4b79a1;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all.5s;
+    }
+
+    nav li {
+        display: flex;
+        margin: 50px;
+        line-height: 30px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+        nav a:active, nav a:hover {
+            border: none;
+            color: #020202;
+        }
+
+    #Check:checked ~ ul {
+        left: 0;
+    }
+}
+
+@media (max-width : 450px) {
+    nav #icon {
+        display: block;
+        font-size: large;
+    }
+
+    label.logo {
+        font-size: 30px;
+        text-shadow: 1.5px 1.5px 1.5px white;
+    }
+}
+
+

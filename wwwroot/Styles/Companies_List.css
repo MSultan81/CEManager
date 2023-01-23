@@ -1,0 +1,346 @@
+﻿body {
+}
+.tbCompanies{
+    
+}
+
+.Select {
+    width: 94%;
+    font-size: 180%;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+    margin-left: 3%;
+    background-color: azure;
+}
+
+    .Select:hover {
+        background-color: aquamarine;
+    }
+
+.option {
+    background-color: aliceblue;
+}
+
+.bold { 
+    margin-top:15px;
+    margin-left: 50px;
+    font-size: large;
+    font-weight: 800;
+    font-style: italic;
+}
+
+tr{
+    margin:4%;
+}
+
+a {
+    text-decoration: none;
+    font-weight:700;
+}
+
+button {
+    border: 0px solid;
+    width: 20%;
+    padding: 3px;
+    background-color: transparent;
+    border-radius: 4px;
+    margin-left: 40px;
+    margin-top:10px;
+    box-shadow: 0 0 2px 2px white;
+}
+
+button:hover{
+    background-color:white;
+}
+
+.btnVisit {
+    margin-left: 60%;
+    background-color: transparent;
+    text-decoration: underline;
+    font-weight: 700;
+    width:fit-content;
+    font-size: x-large;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    border: 0px;
+    box-shadow: 0 0 2px 2px lightblue;
+}
+
+.employeeNb {
+    position: absolute;
+    left: 60%;
+    font-style: italic;
+    font-weight: 900;
+    font-size: x-large;
+    box-shadow: 0 0 2px 2px lightblue;
+    top: 30%;
+}
+
+.btnVisit:hover {
+    background-color: lightblue;
+}
+
+    .btnAddCompany {
+        width: 30%;
+        background-color: lightblue;
+        font-weight: 900;
+        margin-left:35%;
+        margin-top:13px;
+        color:white;
+        font-size: x-large;
+        box-shadow: 0 0 4px 4px black;
+    }
+
+    .btnAddCompany:hover {
+        box-shadow: 0 0 2px 2px rgb(49, 123, 180);
+        background-color: lightblue;
+    }
+
+
+    .card {
+        position: relative;
+        height: 200px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        height: max-content;
+        box-shadow: 0 0 5px 5px black;
+        background-color: lightblue;
+        border-radius: 20px;
+    }
+
+    .card:hover {
+        box-shadow: 0 0 5px 5px rgb(49, 123, 180);
+    }
+
+.inner-box {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+
+p {
+    position: absolute;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 1%;
+    color: white;
+    font-size: x-large;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.card-front, .card-back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 5px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateX(180deg);
+}
+
+.image {
+    position: absolute;
+    border-radius: 20px;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card h2 {
+    position: relative;
+    font-weight: bolder;
+    color: white;
+    font-size: 60px;
+    padding-left: 50px;
+    margin-top: 20px;
+    font-style: italic;
+    text-align: left;
+    text-shadow: 5px 10px 10px black;
+}
+
+.description {
+    position: relative;
+    border-radius: 20px;
+    border: solid 1px white;
+    background-color: transparent;
+    color: white;
+    font-size: x-large;
+    padding: 1%;
+    font-weight: 700;
+    margin-left:20px;
+}
+
+.enter {
+    margin-left: 2%;
+    width: 25%;
+    color: white;
+    border-color: white;
+}
+
+.btnreturn {
+    position: relative;
+    margin: 1%;
+    border-radius: 20px;
+    border: solid 1px white;
+    color: black;
+    background-color: white;
+    font-size: 30px;
+    font-weight: 700;
+    width: 150px;
+    filter: brightness(90%);
+}
+
+    .btnreturn:hover {
+        filter: brightness(100%);
+    }
+
+.displayfiles {
+    position: relative;
+}
+
+.nbfiles {
+    position: absolute;
+    font-size: xx-large;
+    font-weight: initial;
+    top: 32%;
+    color: white;
+    left: 85%;
+    font-weight: 800;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.input-box {
+    width: 100%;
+    background: transparent;
+    border: 1px solid white;
+    margin: 6px 0;
+    height: 35px;
+    border-radius: 20px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-weight: bolder;
+    outline: none;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        margin-top: 3%;
+    }
+
+        .card h2 {
+            font-size: 50px;
+            padding-left: 30px;
+        }
+
+    .btn {
+        font-size: medium;
+        margin-left: 30%;
+    }
+
+    .btnreturn {
+        font-size: larger;
+    }
+
+    p {
+        font-size: larger;
+    }
+
+    .enter {
+        margin-left: 3%;
+        width: 30%;
+    }
+
+    .nbfiles {
+        font-size: x-large;
+        top: 40%;
+        left: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .card {
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+        .card h2 {
+            font-size: 40px;
+            padding-left: 20px;
+        }
+
+    .btn {
+        font-size: medium;
+        margin-left: 30%;
+        padding: 2%;
+    }
+
+    .btnreturn {
+        font-size: medium;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    .enter {
+        margin-left: 3%;
+        width: 30%;
+    }
+
+    .nbfiles {
+        font-size: large;
+        top: 40%;
+        left: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+        .card h2 {
+            font-size: 30px;
+            padding-left: 10px;
+        }
+
+    .btn {
+        font-size: small;
+        margin-left: 20%;
+        padding: 2%;
+    }
+
+    .btnreturn {
+        font-size: medium;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    .enter {
+        margin-left: 3%;
+        width: 35%;
+    }
+
+    .nbfiles {
+        font-size: large;
+        top: 40%;
+        left: 70%;
+    }
+}

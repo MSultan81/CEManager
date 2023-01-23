@@ -1,0 +1,42 @@
+﻿@model CEManager.Models.Company
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Add a New Company</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label label"></label>
+                <input asp-for="Name" class="form-control" placeholder="Enter Company Name"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label label"></label>
+                <input asp-for="Description" class="form-control" placeholder="Enter Description"/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Website" class="control-label label"></label>
+                <input asp-for="Website" class="form-control" placeholder="Company  Website"/>
+                <span asp-validation-for="Website" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Add Company" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br/>
+<div>
+    <a asp-action="GetCompanies" asp-controller="Company">Back to Companies</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

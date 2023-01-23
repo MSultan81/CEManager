@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CEManager.Models.CompanyView>
+
+@{
+    ViewData["Title"] = "GetCompanies";
+}
+<head>
+    <link rel="stylesheet" href="~/Styles/Companies_List.css" type="text/css" />
+</head>
+<body>
+    <br/>      
+    @foreach (var item in Model) {
+<div class="card">
+    <h2>@Html.DisplayFor(modelItem => item.Company.Name)</h2>
+    <h4 class="bold"> @Html.DisplayFor(modelItem => item.Company.Description)<br/><br/>Added at (@Html.DisplayFor(modelItem => item.Company.AddedDate))
+        <br/><br/>
+        Manager is @Html.DisplayFor(modelItem => item.CompanyManager) <br/><br/>
+        @Html.DisplayFor(modelItem => item.Company.NumberOfEmployees) Employees 
+    </h4>
+            <button class="btnVisit">
+            <a href="https://www.@Html.DisplayFor(modelItem => item.Company.Website)">Visit @Html.DisplayFor(modelItem => item.Company.Name) Website</a></button>
+    <div>
+    <button>@Html.ActionLink("Add Employee","AddCompanyEmployee",new{ Id = item.Company.CompanyId})</button>
+    <button>@Html.ActionLink("Edit Company","EditCompany",new{ Id = item.Company.CompanyId})</button>
+    <button>@Html.ActionLink("View Company Employees","ViewEmployees",new{ Id = item.Company.CompanyId})</button>
+    <button>@Html.ActionLink("Delete Company","DeleteCompanyAlert",new{ companyId = item.Company.CompanyId})</button>
+    </div>
+    
+    <br/>
+</div>
+}
+<button class="btnAddCompany"><a style="color:white;" asp-area="" asp-controller="Company" asp-action="Create">Add a New Company</a></button>
+</body> 

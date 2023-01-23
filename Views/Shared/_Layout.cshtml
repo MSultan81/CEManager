@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CEManager</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CEManager.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Styles/_Layout.css" type="text/css" />
+</head>
+<body>
+   <link href="https://code.jquery.com/jquery-3.6.0.js">
+  <nav>
+    <label class="logo">CE Manager</label>
+    <ul>
+      <li><a asp-area="" asp-controller="Company"  asp-action="GetCompanies">Companies</a></li>
+      <li><a asp-area="" asp-controller="Employee"  asp-action="GetEmployees">Employees</a></li>
+      <li><a asp-area="" asp-controller="Manager"  asp-action="GetManagers">Managers</a></li>
+    </ul>
+  </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

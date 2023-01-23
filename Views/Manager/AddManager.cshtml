@@ -1,0 +1,40 @@
+﻿@model CEManager.Models.Employee
+
+@{
+    ViewData["Title"] = "AddManager";
+}
+
+<h1>Add a new Manager</h1>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddManager">
+           <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label label"></label>
+                <input asp-for="FullName" class="form-control" placeholder="FirstName LastName"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label label"></label>
+                <input asp-for="Email" class="form-control" placeholder="example@something.com" />
+            </div>
+            <div class="form-group">
+                <label class="control-label label">Company</label>
+                <select class="form-select" asp-items="ViewBag.Companies" asp-for="CompanyId">
+            </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Position" class="control-label label"></label>
+                <input asp-for="Position" class="form-control" placeholder="Position"/>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input style="width:50%; font-weight:bold;" type="submit" value="Add Manager" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

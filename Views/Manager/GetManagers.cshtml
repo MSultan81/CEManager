@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CEManager.Models.EmployeeView>
+
+@{
+    ViewData["Title"] = "GetManagers";
+}
+<head>
+    <link rel="stylesheet" href="~/Styles/Managers_List.css" type="text/css" />
+</head>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name 
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Company
+            </th>
+            <th>
+               Position
+            </th>
+            <th>
+                <button class="btnAdd"><a class="a" style="color:white;" asp-action="AddManager" asp-controller="Manager">Add new Manager</a></button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.Position)
+            </td>
+            <td>
+                <button class="btnedit"><a class="a" asp-action="EditManager" asp-controller="Manager" asp-route-managerId="@item.Employee.EmployeeId">Edit</a></button>
+                <button class="btndelete"><a class="a" asp-action="DeleteManagerAlert" asp-controller="Manager" asp-route-managerId="@item.Employee.EmployeeId">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

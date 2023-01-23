@@ -1,0 +1,33 @@
+﻿button {
+    width: 70px;
+    border-radius: 3px;
+}
+
+.btnedit {
+    background-color: aliceblue;
+}
+
+.btndelete {
+    background-color: indianred;
+}
+
+button:hover {
+    filter: brightness(150%);
+}
+
+.a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.a:hover {
+        color: black;
+    }
+
+.btnAdd{
+    background-color:green;
+    width:max-content;
+    padding:3px;
+    filter:brightness(120%);
+}

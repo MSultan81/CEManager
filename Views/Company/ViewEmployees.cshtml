@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CEManager.Models.Employee>
+
+@{
+    ViewData["Title"] = "ViewEmployees";
+}
+<head>
+    <link rel="stylesheet" href="~/Styles/Employees_List.css" type="text/css" />
+</head>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Position
+            </th>
+            <th>
+                Is Manager
+            </th>
+            <th>
+          
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsManager)
+            </td>
+            <td>
+                <button class="btnedit"><a class="a" asp-action="EditEmployee" asp-controller="Employee" asp-route-employeeId="@item.EmployeeId">Edit</a></button>
+                <button class="btndelete"><a class="a" asp-action="DeleteEmployeeAlert" asp-controller="Employee" asp-route-employeeId="@item.EmployeeId">Delete</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
